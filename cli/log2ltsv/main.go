@@ -3,11 +3,12 @@ package main
 import (
 	"bufio"
 	"fmt"
-	"github.com/tkuchiki/log2ltsv"
-	"gopkg.in/alecthomas/kingpin.v2"
 	"io"
 	"log"
 	"os"
+
+	"github.com/tkuchiki/log2ltsv"
+	"gopkg.in/alecthomas/kingpin.v2"
 )
 
 var (
@@ -30,7 +31,7 @@ func readFD(fpath string) (io.Reader, error) {
 
 func main() {
 	kingpin.CommandLine.Help = "apache and nginx access log to ltsv format"
-	kingpin.Version("0.1.0")
+	kingpin.Version("0.1.1")
 	kingpin.Parse()
 
 	var parser log2ltsv.Parser
