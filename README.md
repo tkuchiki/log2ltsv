@@ -25,7 +25,7 @@ Flags:
 
 ```diff
 - LogFormat "%h %l %u %t \"%r\" %>s %b \"%{Referer}i\" \"%{User-Agent}i\"" combined
-+LogFormat "%h %l %u %t \"%r\" %>s %b \"%{Referer}i\" \"%{User-Agent}i\" %T" combined
++ LogFormat "%h %l %u %t \"%r\" %>s %b \"%{Referer}i\" \"%{User-Agent}i\" %T" combined
 ```
 
 ```console
@@ -37,7 +37,7 @@ user:- 	time:2017-09-03T12:23:39+00:00	method:GET	uri:/	status:403	size:3839	req
 
 ### Nginx
 
-```
+```diff
 log_format  main  '$remote_addr - $remote_user [$time_local] "$request" '
                   '$status $body_bytes_sent "$http_referer" '
 -                  '"$http_user_agent" "$http_x_forwarded_for"';
